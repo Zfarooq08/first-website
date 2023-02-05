@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "first-website",
+    "section": "",
+    "text": "mtcars|>\nselect(mpg, wt)|>\nggplot(aes(x = wt, y = mpg))+\ngeom_point()+\ngeom_smooth(method = lm, formula = y ~ x, se = FALSE)+\ntheme_clean()+\nlabs(title = \"Fuel Efficiency and Weight\",\n     subtitle = \"Heavier cars are less fuel efficient\",\n     x = \"Weight (Thousands of Pounds)\",\n     y = \"MPG\",\n     caption = \"Henderson and Vellerman (1981)\")"
+  }
+]
