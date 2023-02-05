@@ -1,16 +1,23 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "first-website",
     "section": "",
     "text": "mtcars|>\nselect(mpg, wt)|>\nggplot(aes(x = wt, y = mpg))+\ngeom_point()+\ngeom_smooth(method = lm, formula = y ~ x, se = FALSE)+\ntheme_clean()+\nlabs(title = \"Fuel Efficiency and Weight\",\n     subtitle = \"Heavier cars are less fuel efficient\",\n     x = \"Weight (Thousands of Pounds)\",\n     y = \"MPG\",\n     caption = \"Henderson and Vellerman (1981)\")"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "My name is Zayan Farooq and I attend Walter Payton College Prep. I have an interest in Computer Science and I love to play soccer."
+  },
+  {
+    "objectID": "about.html#about-the-project",
+    "href": "about.html#about-the-project",
+    "title": "About",
+    "section": "About The Project",
+    "text": "About The Project\nMy project, Can Sports be Directly Related to Knee Injuries, shows many different types of sports and how over time may correlate to knee injuries.\n\nGoals\n\nFind out if sports are directly related to knee injuries\nCreate a advanced bar graph showing different sports and the amount of knee injuries over time\n\nA possible challenge could be figuring out how to format my plot\n\n\n“This is Data Science”\n~Preceptor\nKane’s Free High School Data Science Bootcamp"
   }
 ]
