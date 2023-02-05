@@ -6,9 +6,21 @@ website:
   navbar:
     left:
       - href: index.qmd
-      - text: Sources
-        text: Home
-      - about.qmd
+      - text: Home
+        href: about.qmd
+        text: About
+      - sidebar:sources
+      - sidebar:interactive
+  
+  sidebar:
+    - id: sources
+      title: "Sources"
+      style: "floating"
+      backround: "#ffffff"
+      collapse-level: 2
+      contents:
+      - source-1.qmd
+      - source-2.qmd
 
 format:
   html:
