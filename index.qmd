@@ -9,6 +9,8 @@ library(ggthemes)
 ```
 
 ```{r car-plot}
+#| output: false
+#| echo: false
 mtcars|>
 select(mpg, wt)|>
 ggplot(aes(x = wt, y = mpg))+
@@ -20,4 +22,9 @@ labs(title = "Fuel Efficiency and Weight",
      x = "Weight (Thousands of Pounds)",
      y = "MPG",
      caption = "Henderson and Vellerman (1981)")
+```
+
+```{r}
+#| echo: false
+#| label: car-plot
 ```

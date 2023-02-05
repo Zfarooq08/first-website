@@ -8,7 +8,7 @@ My name is **Zayan Farooq** and I attend Walter Payton College Prep. I have an i
 
 ## About The Project
 
-My project, Can Sports be Directly Related to Knee Injuries, shows many different types of sports and how over time may correlate to knee injuries.
+My project, *Can Sports be Directly Related to Knee Injuries*, shows many different types of sports and how over time may correlate to knee injuries.
 
 ### Goals
 
