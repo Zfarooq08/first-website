@@ -18,9 +18,7 @@ My project, Can Sports be Directly Related to Knee Injuries, shows many differen
 
     -   A possible challenge could be figuring out how to format my plot
 
-"This is Data Science"
-\
-~Preceptor
+"This is Data Science"\
+\~Preceptor
 
-
-[Kane’s Free High School Data Science Bootcamp]( https://bootcamp.davidkane.info)
+[Kane's Free High School Data Science Bootcamp](https://bootcamp.davidkane.info)
