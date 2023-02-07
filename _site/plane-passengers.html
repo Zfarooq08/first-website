@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Zayan Farooq">
 
-<title>first-website</title>
+<title>first-website - Plane Passengers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,6 +122,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="site_libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
+<script src="site_libs/jquery-1.11.1/jquery.min.js"></script>
+<link href="site_libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet">
+<script src="site_libs/dygraphs-1.1.1/dygraph-combined.js"></script>
+<script src="site_libs/dygraphs-1.1.1/shapes.js"></script>
+<script src="site_libs/moment-2.8.4/moment.js"></script>
+<script src="site_libs/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+<script src="site_libs/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
+<script src="site_libs/dygraphs-binding-1.1.1.6/dygraphs.js"></script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -143,7 +153,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="./index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -174,7 +184,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">first-website</h1>
+      <h1 class="quarto-secondary-nav-title">Plane Passengers</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -209,13 +219,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">first-website</h1>
+<h1 class="title d-none d-lg-block">Plane Passengers</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Zayan Farooq </p>
+          </div>
+  </div>
     
   
     
@@ -225,29 +241,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>car_plot <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="st">"car-plot.rds"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>car_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dygraphs)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dygraph</span>(AirPassengers, <span class="at">main =</span> <span class="st">"Plane Passengers 1950-1960"</span>)<span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dyRangeSelector</span>(<span class="at">dateWindow =</span> <span class="fu">c</span>(<span class="st">"1950-01-01"</span>, <span class="st">"1960-12-31"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/car-plot-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"car-plot.png"</span>, <span class="at">plot =</span> car_plot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Saving 7 x 5 in image</code></pre>
-</div>
-</div>
-<p>This is a comment I am making to show how i made the image. First i did ggsave(“car-plot = car_plot). This made an image of the car_plot graph. Then i did include_graphics(”images/car-plot.png). Images is the folder that car-plot.png is in.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">"images/car-plot.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="images/car-plot.png" class="img-fluid" width="1050"></p>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/car-plot-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Saving 7 x 5 in image</code></pre>
+<div class="dygraphs html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-c56dde15c57171169883" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-c56dde15c57171169883">{"x":{"attrs":{"title":"Plane Passengers 1950-1960","labels":["month","V1"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}},"showRangeSelector":true,"dateWindow":["1950-01-01T00:00:00.000Z","1960-12-31T00:00:00.000Z"],"rangeSelectorHeight":40,"rangeSelectorPlotFillColor":" #A7B1C4","rangeSelectorPlotStrokeColor":"#808FAB","interactionModel":"Dygraph.Interaction.defaultModel"},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["1949-01-01T00:00:00.000Z","1949-02-01T00:00:00.000Z","1949-03-01T00:00:00.000Z","1949-04-01T00:00:00.000Z","1949-05-01T00:00:00.000Z","1949-06-01T00:00:00.000Z","1949-07-01T00:00:00.000Z","1949-08-01T00:00:00.000Z","1949-09-01T00:00:00.000Z","1949-10-01T00:00:00.000Z","1949-11-01T00:00:00.000Z","1949-12-01T00:00:00.000Z","1950-01-01T00:00:00.000Z","1950-02-01T00:00:00.000Z","1950-03-01T00:00:00.000Z","1950-04-01T00:00:00.000Z","1950-05-01T00:00:00.000Z","1950-06-01T00:00:00.000Z","1950-07-01T00:00:00.000Z","1950-08-01T00:00:00.000Z","1950-09-01T00:00:00.000Z","1950-10-01T00:00:00.000Z","1950-11-01T00:00:00.000Z","1950-12-01T00:00:00.000Z","1951-01-01T00:00:00.000Z","1951-02-01T00:00:00.000Z","1951-03-01T00:00:00.000Z","1951-04-01T00:00:00.000Z","1951-05-01T00:00:00.000Z","1951-06-01T00:00:00.000Z","1951-07-01T00:00:00.000Z","1951-08-01T00:00:00.000Z","1951-09-01T00:00:00.000Z","1951-10-01T00:00:00.000Z","1951-11-01T00:00:00.000Z","1951-12-01T00:00:00.000Z","1952-01-01T00:00:00.000Z","1952-02-01T00:00:00.000Z","1952-03-01T00:00:00.000Z","1952-04-01T00:00:00.000Z","1952-05-01T00:00:00.000Z","1952-06-01T00:00:00.000Z","1952-07-01T00:00:00.000Z","1952-08-01T00:00:00.000Z","1952-09-01T00:00:00.000Z","1952-10-01T00:00:00.000Z","1952-11-01T00:00:00.000Z","1952-12-01T00:00:00.000Z","1953-01-01T00:00:00.000Z","1953-02-01T00:00:00.000Z","1953-03-01T00:00:00.000Z","1953-04-01T00:00:00.000Z","1953-05-01T00:00:00.000Z","1953-06-01T00:00:00.000Z","1953-07-01T00:00:00.000Z","1953-08-01T00:00:00.000Z","1953-09-01T00:00:00.000Z","1953-10-01T00:00:00.000Z","1953-11-01T00:00:00.000Z","1953-12-01T00:00:00.000Z","1954-01-01T00:00:00.000Z","1954-02-01T00:00:00.000Z","1954-03-01T00:00:00.000Z","1954-04-01T00:00:00.000Z","1954-05-01T00:00:00.000Z","1954-06-01T00:00:00.000Z","1954-07-01T00:00:00.000Z","1954-08-01T00:00:00.000Z","1954-09-01T00:00:00.000Z","1954-10-01T00:00:00.000Z","1954-11-01T00:00:00.000Z","1954-12-01T00:00:00.000Z","1955-01-01T00:00:00.000Z","1955-02-01T00:00:00.000Z","1955-03-01T00:00:00.000Z","1955-04-01T00:00:00.000Z","1955-05-01T00:00:00.000Z","1955-06-01T00:00:00.000Z","1955-07-01T00:00:00.000Z","1955-08-01T00:00:00.000Z","1955-09-01T00:00:00.000Z","1955-10-01T00:00:00.000Z","1955-11-01T00:00:00.000Z","1955-12-01T00:00:00.000Z","1956-01-01T00:00:00.000Z","1956-02-01T00:00:00.000Z","1956-03-01T00:00:00.000Z","1956-04-01T00:00:00.000Z","1956-05-01T00:00:00.000Z","1956-06-01T00:00:00.000Z","1956-07-01T00:00:00.000Z","1956-08-01T00:00:00.000Z","1956-09-01T00:00:00.000Z","1956-10-01T00:00:00.000Z","1956-11-01T00:00:00.000Z","1956-12-01T00:00:00.000Z","1957-01-01T00:00:00.000Z","1957-02-01T00:00:00.000Z","1957-03-01T00:00:00.000Z","1957-04-01T00:00:00.000Z","1957-05-01T00:00:00.000Z","1957-06-01T00:00:00.000Z","1957-07-01T00:00:00.000Z","1957-08-01T00:00:00.000Z","1957-09-01T00:00:00.000Z","1957-10-01T00:00:00.000Z","1957-11-01T00:00:00.000Z","1957-12-01T00:00:00.000Z","1958-01-01T00:00:00.000Z","1958-02-01T00:00:00.000Z","1958-03-01T00:00:00.000Z","1958-04-01T00:00:00.000Z","1958-05-01T00:00:00.000Z","1958-06-01T00:00:00.000Z","1958-07-01T00:00:00.000Z","1958-08-01T00:00:00.000Z","1958-09-01T00:00:00.000Z","1958-10-01T00:00:00.000Z","1958-11-01T00:00:00.000Z","1958-12-01T00:00:00.000Z","1959-01-01T00:00:00.000Z","1959-02-01T00:00:00.000Z","1959-03-01T00:00:00.000Z","1959-04-01T00:00:00.000Z","1959-05-01T00:00:00.000Z","1959-06-01T00:00:00.000Z","1959-07-01T00:00:00.000Z","1959-08-01T00:00:00.000Z","1959-09-01T00:00:00.000Z","1959-10-01T00:00:00.000Z","1959-11-01T00:00:00.000Z","1959-12-01T00:00:00.000Z","1960-01-01T00:00:00.000Z","1960-02-01T00:00:00.000Z","1960-03-01T00:00:00.000Z","1960-04-01T00:00:00.000Z","1960-05-01T00:00:00.000Z","1960-06-01T00:00:00.000Z","1960-07-01T00:00:00.000Z","1960-08-01T00:00:00.000Z","1960-09-01T00:00:00.000Z","1960-10-01T00:00:00.000Z","1960-11-01T00:00:00.000Z","1960-12-01T00:00:00.000Z"],[112,118,132,129,121,135,148,148,136,119,104,118,115,126,141,135,125,149,170,170,158,133,114,140,145,150,178,163,172,178,199,199,184,162,146,166,171,180,193,181,183,218,230,242,209,191,172,194,196,196,236,235,229,243,264,272,237,211,180,201,204,188,235,227,234,264,302,293,259,229,203,229,242,233,267,269,270,315,364,347,312,274,237,278,284,277,317,313,318,374,413,405,355,306,271,306,315,301,356,348,355,422,465,467,404,347,305,336,340,318,362,348,363,435,491,505,404,359,310,337,360,342,406,396,420,472,548,559,463,407,362,405,417,391,419,461,472,535,622,606,508,461,390,432]]},"evals":["attrs.interactionModel"],"jsHooks":[]}</script>
 </div>
 </div>
 

@@ -5,23 +5,19 @@ title: "first-website"
 ```{r libraries, include = FALSE}
 library(tidyverse)
 library(ggthemes)
-
+library(knitr)
 ```
 
 ```{r car-plot}
-#| output: false
-#| echo: false
-mtcars|>
-select(mpg, wt)|>
-ggplot(aes(x = wt, y = mpg))+
-geom_point()+
-geom_smooth(method = lm, formula = y ~ x, se = FALSE)+
-theme_clean()+
-labs(title = "Fuel Efficiency and Weight",
-     subtitle = "Heavier cars are less fuel efficient",
-     x = "Weight (Thousands of Pounds)",
-     y = "MPG",
-     caption = "Henderson and Vellerman (1981)")
+car_plot <- read_rds("car-plot.rds")
+car_plot
+ggsave("car-plot.png", plot = car_plot)
+```
+
+This is a comment I am making to show how i made the image. First i did ggsave("car-plot = car_plot). This made an image of the car_plot graph. Then i did include_graphics("images/car-plot.png). Images is the folder that car-plot.png is in. 
+
+```{r image}
+include_graphics("images/car-plot.png")
 ```
 
 ```{r}

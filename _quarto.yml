@@ -4,10 +4,20 @@ project:
 website:
   title: "first-website"
   navbar:
+      - source-2.qmd
+      - id: interactive
+        title: "Interactive Pages"
+        style: "floating"
+        background: "#ffffff"
+        collapse-level: 3
+        contents:
+          - plane-passengers.qmd
+          - map-london.qmd
+          - plotly.qmd
     left:
       - href: index.qmd
-      - text: Home
-        href: about.qmd
+        text: Home
+      - href: about.qmd
         text: About
       - sidebar:sources
       - sidebar:interactive

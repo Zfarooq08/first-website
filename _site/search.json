@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "first-website",
-    "section": "",
-    "text": "mtcars|>\nselect(mpg, wt)|>\nggplot(aes(x = wt, y = mpg))+\ngeom_point()+\ngeom_smooth(method = lm, formula = y ~ x, se = FALSE)+\ntheme_clean()+\nlabs(title = \"Fuel Efficiency and Weight\",\n     subtitle = \"Heavier cars are less fuel efficient\",\n     x = \"Weight (Thousands of Pounds)\",\n     y = \"MPG\",\n     caption = \"Henderson and Vellerman (1981)\")"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -21,10 +14,17 @@
     "text": "About The Project\nMy project, Can Sports be Directly Related to Knee Injuries, shows many different types of sports and how over time may correlate to knee injuries.\n\nGoals\n\nFind out if sports are directly related to knee injuries\nCreate a advanced bar graph showing different sports and the amount of knee injuries over time\n\nA possible challenge could be figuring out how to format my plot\n\n\n“This is Data Science”\n~Preceptor\nKane’s Free High School Data Science Bootcamp"
   },
   {
-    "objectID": "sources.html",
-    "href": "sources.html",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "first-website",
     "section": "",
-    "text": "An overview of sources used in my project\nThese are my sources. Here are some challenges. Quarto websites are awesome"
+    "text": "car_plot <- read_rds(\"car-plot.rds\")\ncar_plot\n\n\n\nggsave(\"car-plot.png\", plot = car_plot)\n\nSaving 7 x 5 in image\n\n\nThis is a comment I am making to show how i made the image. First i did ggsave(“car-plot = car_plot). This made an image of the car_plot graph. Then i did include_graphics(”images/car-plot.png). Images is the folder that car-plot.png is in.\n\ninclude_graphics(\"images/car-plot.png\")\n\n\n\n\n\n\n\n\n\nSaving 7 x 5 in image"
+  },
+  {
+    "objectID": "plane-passengers.html",
+    "href": "plane-passengers.html",
+    "title": "Plane Passengers",
+    "section": "",
+    "text": "library(dygraphs)\ndygraph(AirPassengers, main = \"Plane Passengers 1950-1960\")|>\ndyRangeSelector(dateWindow = c(\"1950-01-01\", \"1960-12-31\"))"
   }
 ]
